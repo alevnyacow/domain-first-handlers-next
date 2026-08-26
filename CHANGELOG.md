@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/alevnyacow/domain-first-handlers-next/compare/v1.0.0...v1.0.1) (2026-08-26)
+
+
+### Bug Fixes
+
+* added LICENSE field in package.json ([2bdc9a1](https://github.com/alevnyacow/domain-first-handlers-next/commit/2bdc9a1647fc421d352922b109585ebf8be0cc9d))
+
 # 1.0.0 (2026-08-26)
 
 
