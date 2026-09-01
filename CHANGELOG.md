@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/alevnyacow/domain-first-handlers-next/compare/v1.0.1...v1.1.0) (2026-09-01)
+
+
+### Features
+
+* cookies config support ([c7bfd20](https://github.com/alevnyacow/domain-first-handlers-next/commit/c7bfd20c889e6b9908a6eca21f485fc4adb0a5cf))
+
 ## [1.0.1](https://github.com/alevnyacow/domain-first-handlers-next/compare/v1.0.0...v1.0.1) (2026-08-26)
 
 
