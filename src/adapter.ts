@@ -39,8 +39,19 @@ export const nextAdapter: Adapter<[request: NextRequest], NextResponse> = {
         if (x.success) {
             if (x.cookies) {
                 const cookiesProvider = await cookies();
+                const cookiesConfiguration = x.configuration?.cookies ?? {};
                 for (const cookie of Object.entries(x.cookies)) {
-                    cookiesProvider.set(cookie[0], cookie[1]);
+                    const cookieConfig = cookiesConfiguration[cookie[0]];
+                    cookiesProvider.set(
+                        cookie[0],
+                        cookie[1],
+                        cookieConfig
+                            ? {
+                                  maxAge: cookieConfig.maxAge,
+                                  httpOnly: cookieConfig.httpOnly
+                              }
+                            : undefined
+                    );
                 }
             }
 
