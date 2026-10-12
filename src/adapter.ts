@@ -19,9 +19,20 @@ function jsonResponse<T>(data: T, init?: ResponseInit) {
     }) as any;
 }
 
-export const nextAdapter: Adapter<[request: NextRequest], NextResponse> = {
+/**
+ * Second argument Next.js passes to App Router route handlers.
+ */
+export type NextRouteContext = {
+    params?: Promise<Record<string, string | string[] | undefined>>;
+};
+
+export const nextAdapter: Adapter<
+    [request: NextRequest, context?: NextRouteContext],
+    NextResponse
+> = {
     input: {
         body: (x) => x.json(),
+        pathParams: async (_, context) => (await context?.params) ?? {},
         queryParams: (x) =>
             Object.fromEntries(x.nextUrl.searchParams.entries()),
         cookies: (x) =>
