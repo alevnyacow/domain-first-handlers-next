@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/alevnyacow/domain-first-handlers-next/compare/v1.1.0...v2.0.0) (2026-10-12)
+
+
+### Features
+
+* path parameters support ([9c7fb7c](https://github.com/alevnyacow/domain-first-handlers-next/commit/9c7fb7ceb4c49bf10bfde89c4b8d3efa32bafb9f))
+
+
+### BREAKING CHANGES
+
+* peer dependencies version breaking change
+
 # [1.1.0](https://github.com/alevnyacow/domain-first-handlers-next/compare/v1.0.1...v1.1.0) (2026-09-01)
 
 
